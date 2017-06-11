@@ -6,4 +6,7 @@ import ssl
 import requests
 import ctypes
 import random
-im
+import winshell
+import webbrowser
+import wikipedia
+import wolframalpha
