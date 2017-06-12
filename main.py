@@ -50,3 +50,4 @@ class GUI(wx.Frame):
         panel = SetSizer(sizer)
         self.Show()
         speakNow.speak('''Welcome Back !! Where have you been ?''')
+        #Further improved  Graphical Interface Coming.
