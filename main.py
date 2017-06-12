@@ -47,3 +47,6 @@ class GUI(wx.Frame):
         sizer = wx.BoxSizer(wx.VERTICAL)
         windowLabel = wx.StaticText(panel, label = "May the force be with you !!")
         sizer.Add(windowLabel, 0, wx.ALL, 5)
+        panel = SetSizer(sizer)
+        self.Show()
+        speakNow.speak('''Welcome Back !! Where have you been ?''')
