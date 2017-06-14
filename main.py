@@ -47,7 +47,13 @@ class GUI(wx.Frame):
         sizer = wx.BoxSizer(wx.VERTICAL)
         windowLabel = wx.StaticText(panel, label = "May the force be with you !!")
         sizer.Add(windowLabel, 0, wx.ALL, 5)
+        self.text = wx.TextCtrl(panel, style = wx.TE_PROCESS_ENTER, size = (400, 300))
+        self.text.SetFocus()
+        self.text.Bind(wx.EVT_TEXT_ENTER, self.onEnter)
+        sizer.Add(self.text, 0, wx.ALL, 5)
         panel = SetSizer(sizer)
         self.Show()
         speakNow.speak('''Welcome Back !! Where have you been ?''')
-        #Further improved  Graphical Interface Coming.
+
+    def onEnter(self, event):
+        text = self.text.GetValue()
