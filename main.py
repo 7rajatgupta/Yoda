@@ -22,9 +22,9 @@ requests.packages.urllib.disable_warnings()
 try:
     unverifiedHttpsContext = ssl._create_unverified_context
 except AttributeError:
-    pass
-else:
     ssl._create_default_https_context = unverifiedHttpsContext
+else:
+
 
 mHeaders = {'''user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6)
            AppleWebKit/537.36 (KHTML, like Gecko)
