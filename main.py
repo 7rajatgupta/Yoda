@@ -76,4 +76,11 @@ class GUI(wx.Frame):
                       .format(e))
             except:
                 print("Unknown exception occurred!")
-#Next move is to open a webpage.
+#Action : is to open a webpage.
+        if text.startswith('open '):
+            try:
+                speakNow.Speak("opening "+link[1])
+                webbrowser.open('http://www.'+link[1]+'.com')
+            except:
+                print('Sorry, No Internet Connection!')
+#Action :  Play Song on Youtube
