@@ -57,3 +57,23 @@ class GUI(wx.Frame):
 
     def onEnter(self, event):
         text = self.text.GetValue()
+        text = text.lower()
+        link = text.split()
+        if text == '':
+            r = sr.Recognizer()
+            with sr.Microphone() as src:
+                audio = r.listen(src)
+            try:
+                text = r.recognize_google(audio)
+                text = text.lower()
+                link = text.split()
+                self.text.SetValue(text)
+
+            except sr.UnknownValueError:
+                print("Google Speech Recognition could not understand audio")
+            except sr.RequestError as e:
+                print("Could not request results from Google STT; {0}"
+                      .format(e))
+            except:
+                print("Unknown exception occurred!")
+#Next move is to open a webpage.
