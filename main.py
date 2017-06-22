@@ -116,3 +116,31 @@ class GUI(wx.Frame):
                 print("My force has cleared the remains of the dead !")
             except:
                 print("I've been doomed !")
+#Action : Open Science related News and headlines.
+        elif text.startswith('science '):
+            try:
+                jsonObj = urlopen('''https://newsapi.org/v1/articles?source=new-scientist&sortBy=top&apiKey=your_API_here''')
+                data = json.load(jsonObj)
+                i = 1
+                speak.Speak('''I have something latest and greatest for you from my ancestors on earth !''')
+                print(''' ----------SCIENCE NEWS'''+'\n')
+                for item in data['articles']:
+                    print(str(i)+'. '+item['title']+'\n')
+                    print(item['description']+'\n')
+                    i += 1
+            except:
+                print("The force of Internet isn't with you!")
+        elif text.startswith('headlines '):
+            try:
+                jsonObj = urlopen('''https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=top&apiKey=your_API_here''')
+                data = json.load(jsonObj)
+                i = 1
+                speak.Speak("Here's something I could find in your country, from my best ally !")
+                print('''             ===============TIMES OF INDIA============'''
+                +'\n')
+                for item in data['articles']:
+                    print(str(i)+'. '+item['title']+'\n')
+                    print(item['description']+'\n')
+                    i += 1
+            except Exception as e:
+                print(str(e))
