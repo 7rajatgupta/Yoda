@@ -151,3 +151,11 @@ class GUI(wx.Frame):
                 ctypes.windll.user32.LockWorkStation()
             except Exception as e:
                 print(str(e))
+#Action : user-bored, play videos
+        elif text.endswith('bored'):
+            try:
+                speakNow.Speak("I love Star wars music, but I'll play something to free you from your misery !")
+                song = random.choice(videos)
+                os.startfile(song)
+            except Exception as e:
+                print(str(e))
