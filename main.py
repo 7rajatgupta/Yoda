@@ -82,5 +82,20 @@ class GUI(wx.Frame):
                 speakNow.Speak("opening "+link[1])
                 webbrowser.open('http://www.'+link[1]+'.com')
             except:
-                print('Sorry, No Internet Connection!')
+                print("Internet isn't with you!")
 #Action :  Play Song on Youtube
+        elif text.startswith('play '):
+            try:
+                link = '+'.join(link[1:])
+                say = link.replace('+', ' ')
+                url = 'https://www.youtube.com/results?search_query='+link
+                source_code = requests.get(url, headers=headers, timeout=15)
+                plain_text = source_code.text
+                soup = BeautifulSoup(plain_text, "html.parser")
+                songs = soup.findAll('div', {'class': 'yt-lockup-video'})
+                song = songs[0].contents[0].contents[0].contents[0]
+                hit = song['href']
+                speakNow.Speak("playing "+say)
+                webbrowser.open('https://www.youtube.com'+hit)
+            except:
+                print("Internet isn't with you!")
