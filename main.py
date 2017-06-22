@@ -104,8 +104,15 @@ class GUI(wx.Frame):
             try:
                 link = '+'.join(link[1:])
                 say = link.replace('+', ' ')
-                # print(link)
                 speakNow.Speak("searching on google for "+say)
                 webbrowser.open('https://www.google.co.in/search?q='+link)
             except:
                 print("The force of Internet isn't with you!")
+#Action : Empty the recycle bin :
+        elif text.startswith('empty '):
+            try:
+                winshell.recycle_bin().empty(confirm=False,
+                                             show_progress=False, sound=True)
+                print("My force has cleared the remains of the dead !")
+            except:
+                print("I've been doomed !")
