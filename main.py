@@ -122,7 +122,7 @@ class GUI(wx.Frame):
                 jsonObj = urlopen('''https://newsapi.org/v1/articles?source=new-scientist&sortBy=top&apiKey=your_API_here''')
                 data = json.load(jsonObj)
                 i = 1
-                speak.Speak('''I have something latest and greatest for you from my ancestors on earth !''')
+                speakNow.Speak('''I have something latest and greatest for you from my ancestors on earth !''')
                 print(''' ----------SCIENCE NEWS'''+'\n')
                 for item in data['articles']:
                     print(str(i)+'. '+item['title']+'\n')
@@ -135,12 +135,19 @@ class GUI(wx.Frame):
                 jsonObj = urlopen('''https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=top&apiKey=your_API_here''')
                 data = json.load(jsonObj)
                 i = 1
-                speak.Speak("Here's something I could find in your country, from my best ally !")
+                speakNow.Speak("Here's something I could find in your country, from my best ally !")
                 print('''             ===============TIMES OF INDIA============'''
                 +'\n')
                 for item in data['articles']:
                     print(str(i)+'. '+item['title']+'\n')
                     print(item['description']+'\n')
                     i += 1
+            except Exception as e:
+                print(str(e))
+#Action : Lock the device:
+        elif text.startswith('lock '):
+            try:
+                speakNow.Speak("locking the device")
+                ctypes.windll.user32.LockWorkStation()
             except Exception as e:
                 print(str(e))
