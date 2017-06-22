@@ -159,3 +159,19 @@ class GUI(wx.Frame):
                 os.startfile(song)
             except Exception as e:
                 print(str(e))
+#any-other actions, open a wikipedia page or perform a google search
+        else:
+            try:
+
+                client = wolframalpha.Client(app_id)
+                res = client.query(put)
+                ans = next(res.results).text
+                print(ans)
+                speakNow.Speak(ans)
+            except:
+                #direct to the wikipedia page
+                text = put.split()
+                text = ' '.join(put[2:])
+                #print(text)
+                print(wikipedia.summary(text))
+                speakNow.Speak('Searched wikipedia for '+put)
