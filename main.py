@@ -82,7 +82,7 @@ class GUI(wx.Frame):
                 speakNow.Speak("opening "+link[1])
                 webbrowser.open('http://www.'+link[1]+'.com')
             except:
-                print("Internet isn't with you!")
+                print("The force of Internet isn't with you!")
 #Action :  Play Song on Youtube
         elif text.startswith('play '):
             try:
@@ -98,4 +98,14 @@ class GUI(wx.Frame):
                 speakNow.Speak("playing "+say)
                 webbrowser.open('https://www.youtube.com'+hit)
             except:
-                print("Internet isn't with you!")
+                print("The force of Internet isn't with you!")
+#Action : Google search :
+        elif text.startswith('search '):
+            try:
+                link = '+'.join(link[1:])
+                say = link.replace('+', ' ')
+                # print(link)
+                speakNow.Speak("searching on google for "+say)
+                webbrowser.open('https://www.google.co.in/search?q='+link)
+            except:
+                print("The force of Internet isn't with you!")
