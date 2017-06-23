@@ -175,3 +175,10 @@ class GUI(wx.Frame):
                 #print(text)
                 print(wikipedia.summary(text))
                 speakNow.Speak('Searched wikipedia for '+put)
+#end onEnter() method.
+#Triggering the  GUI
+if __name__ == "__main__":
+        app = wx.App(True)
+        frame = MyFrame()
+        app.MainLoop()
+#End of main.py
