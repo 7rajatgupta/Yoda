@@ -3,12 +3,21 @@
 ## Yoda is a digital Assistant which works on collecting information from the Internet and is currently in alpha stage.
 
 # Operations supported :
-### Play a song
 
-### Ask the weather
+### Search the Internet for anything. (Like Weather, Questions, Movies etc)
 
-### Ask information on celebrities or places to explore.
+### Open a Webpage
 
-### Ask simple calculations like Currency conversions, simple maths etc.
+### Play a song on YouTube.
 
-### Remind you of a task, meeting, set an alarm, send a gmail.
+### Google search. (Obviously !)
+
+### Open News Articles or Science headlines for the day. (Major source : The Times of India for any other news)
+
+### Empty the Recycle Bin (Works with Windows 7 and newer)
+
+### Lock the device. (Works on Windows and Mac.)
+
+### Search Wikipedia for any other information.
+
+### If you are bored, Just say it, It'll come up with something interesting !
