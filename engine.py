@@ -27,4 +27,20 @@ class MyFrame(wx.Frame):
         panel.SetSizer(sizer)
         self.Show()
         speakNow("Yoda, the most wisest living on this planet, Waiting for your command my lord !")
-        
+    def onEnter(self, event):
+        input = self.text.GetValue()
+        # input = input.lower()
+        #app_id = '2V3684-LXELTTTJ9J'
+        try:
+            # wolframalpha
+            client = wolframalpha.Client(app_id)
+            res = client.query(input)
+            answer = next(res.results).text
+            print(answer)
+            speakNow(answer)
+        except:
+            # wikipedia
+            input = input.split(' ')
+            input = ' '.join(input[2:])
+            print(wikipedia.summary(input))
+            speakNow('My ally Wikipedia has suggested that :  '+input)    
