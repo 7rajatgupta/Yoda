@@ -18,7 +18,6 @@ from bs4 import BeautifulSoup as BS
 # Handle SSL error with requests.packages
 #Disable Warnings
 requests.packages.urllib.disable_warnings()
-# TODO: Get API's
 try:
     unverifiedHttpsContext = ssl._create_unverified_context
 except AttributeError:
@@ -35,7 +34,7 @@ videos = ['Videos\\1.mp4', 'Videos\\2.mp4',
           'Videos\\3.mp4', 'Videos\\4.mp4',
           'Videos\\5.mp4', 'Videos\\6.mp4',
           'Videos\\7.mp4']
-apiKey = '' #Put your api's key here
+apiKey = 'LUWWX5-9Y8P3W66HA'
 
 #Graphical Interface:
 class GUI(wx.Frame):
