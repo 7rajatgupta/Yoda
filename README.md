@@ -21,3 +21,10 @@
 ### Search Wikipedia for any other information.
 
 ### If you are bored, Just say it, It'll come up with something interesting !
+
+# Usage
+
+### 1. Download and extract the contents to a folder.
+### 2. Open a terminal/command prompt in that folder.
+### 3. Run the command `python main.py` to execute the *main.py*
+### 4. Yoda will be at your command. Use your mic to interact with it. 
