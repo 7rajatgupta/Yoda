@@ -5,7 +5,7 @@
 
 
 # Operations supported :
-===============================
+
 
 ### Search the Internet for anything. (Like Weather, Questions, Movies etc)
 
@@ -26,7 +26,7 @@
 ### If you are bored, Just say it, It'll come up with something interesting !
 
 # Usage
-============
+
 
 + Download and extract the contents to a folder.
 + Open a terminal/command prompt in that folder.
