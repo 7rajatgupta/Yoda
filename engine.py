@@ -7,7 +7,7 @@ import os
 def speakNow(value):
     engine = pyttsx.init()
     #engine = pyttsx.getProperty #Crashes when started first Time
-    
+
     voices = engine.getProperty('voices')
     rate = engine.getProperty('rate')
     engine.setProperty('rate', rate-30)
@@ -46,3 +46,9 @@ class MyFrame(wx.Frame):
             input = ' '.join(input[2:])
             print(wikipedia.summary(input))
             speakNow('My ally Wikipedia has suggested that :  '+input)
+
+
+if __name__ == "__main__":
+    app = wx.App(True)
+    frame = MyFrame()
+    app.MainLoop()
