@@ -1,6 +1,6 @@
 # Yoda
 ![Yoda](https://s-media-cache-ak0.pinimg.com/originals/72/4a/96/724a96707ee0099a62544a8849600f8c.jpg)
-## Yoda will serve at your command as a Digital Assistant like Cortana or Siri. It gives a star wars feel to you and keeps you entertained. It is built using Python and works on Both Windows and Linux(terminal). It interacts with several open source Python libraries to get the job done. It's currently in beta stage and new features are being added in the upcoming days.
+## Yoda will serve at your command as a Digital Assistant like Cortana or Siri. It gives a star wars feel to you and keeps you entertained. It is built using Python and works on Windows XP and newer. It interacts with several open source Python libraries to get the job done. It's currently in beta stage and new features are being added in the upcoming days.
 
 # Operations supported :
 

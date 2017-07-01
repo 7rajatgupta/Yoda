@@ -1,4 +1,4 @@
-import win32.com.client as win32client
+import win32com.client as win32client
 import json
 import time
 import ssl
@@ -131,6 +131,7 @@ class GUI(wx.Frame):
             except:
                 print("The force of Internet isn't with you!")
         elif text.startswith('headlines '):
+
             try:
                 jsonObj = urlopen('''https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=top&apiKey=your_API_here''')
                 data = json.load(jsonObj)

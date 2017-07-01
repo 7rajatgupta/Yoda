@@ -9,6 +9,7 @@ def speakNow(value):
     #engine = pyttsx.getProperty #Crashes when started first Time
 
     voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[4].id)
     rate = engine.getProperty('rate')
     engine.setProperty('rate', rate-30)
     engine.say(value)
